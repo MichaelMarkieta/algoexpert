@@ -1,11 +1,12 @@
 # Solution 1
 import math
 
-def binarySearch(array, target, baseIndex = 0):
+
+def binarySearch(array, target, baseIndex=0):
     if len(array) == 1:
         return -1 if array[0] != target else baseIndex
 
-    mid = math.floor(len(array)/2)
+    mid = math.floor(len(array) / 2)
 
     if target == array[mid]:
         return baseIndex + mid
@@ -14,5 +15,5 @@ def binarySearch(array, target, baseIndex = 0):
     else:
         baseIndex += mid
         baseIndex = binarySearch(array[mid:], target, baseIndex)
-    
+
     return baseIndex

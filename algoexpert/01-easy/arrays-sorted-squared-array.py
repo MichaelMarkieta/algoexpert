@@ -6,7 +6,7 @@
 
 # def square(val):
 #     return pow(val, 2)
-  
+
 # Solution 2
 def sortedSquaredArray(array):
     sortedSquared = []
@@ -23,5 +23,5 @@ def sortedSquaredArray(array):
         else:
             sortedSquared.insert(0, pow(array[b], 2))
             b -= 1
-            
+
     return sortedSquared

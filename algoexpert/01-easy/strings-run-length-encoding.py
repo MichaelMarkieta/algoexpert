@@ -8,12 +8,13 @@ def runLengthEncoding(string):
     rlestring = "".join(rlestring)
     return rlestring
 
+
 # Solution 2
 def runLengthEncoding(string):
     rle = ""
     countChar = 0
     lastChar = ord(string[0])
-    
+
     for i, x in enumerate(string):
         if ord(x) != lastChar:
             rle += str(countChar)
@@ -22,7 +23,7 @@ def runLengthEncoding(string):
             lastChar = ord(x)
         else:
             countChar += 1
-            
+
         if countChar == 9:
             rle += str(countChar)
             rle += chr(lastChar)
@@ -31,5 +32,5 @@ def runLengthEncoding(string):
 
     rle += str(countChar)
     rle += chr(lastChar)
-    
+
     return rle
